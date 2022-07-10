@@ -16,10 +16,17 @@
       <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
       <script async defer data-website-id="6d7e8fec-e3e3-479a-a0e7-ea156099a8b2" src="https://jnmstat.space/umami.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
     <!-- Custom styles for this template -->
   </head>
 
-  <body>
+  <body style="width:100%;height:100%">
 
     <header>
       <div class="navbar navbar-dark bg-dark box-shadow" style="z-index: 999;position: fixed;width:100%">
@@ -30,34 +37,10 @@
         </div>
       </div>
     </header>
-    
+    <div id="map" style="width:100%;height:100%"></div>
   </body>
   <footer class="text-muted">
-        <script>
-        
-                        
-        function ausgabe(typ,link){
-            if(link.includes("/gallery.")){
-                alert("Bitte gib einen Artikellink ein. Mit Galerie-Links funktioniert der Generator leider im Moment noch nicht.");
-            }else{
-                
-                if(link == ''){
-                    document.getElementById('keinlink').style.display = 'block';
-                }else if(typ == "tarue" || typ == "linkinbio" || typ == "badge"){
-                     document.getElementById('keinlink').style.display = 'none';
-                    window.open("ausgabe/design2/"+typ+".php?link="+link);     
-                }else{
-                    document.getElementById('keinlink').style.display = 'none';
-                    window.open("ausgabe/"+typ+".php?link="+link); 
-                }
-                
-            }
-            
-                
-        }
-                    
-        
-        </script>
+    
       
     </footer>
 
