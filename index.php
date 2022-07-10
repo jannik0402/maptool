@@ -8,8 +8,6 @@
     
     <title>Maptool</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -24,9 +22,15 @@
    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
    crossorigin=""></script>
     <!-- Custom styles for this template -->
+    <style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+	</style>
   </head>
 
-  <body style="width:100%;height:100%">
+  <body>
 
     <header>
       <div class="navbar navbar-dark bg-dark box-shadow" style="z-index: 999;position: fixed;width:100%">
@@ -43,10 +47,12 @@
     
     <script>
       var map = L.map('map').setView([51.505, -0.09], 13);
+      
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
+      
     </script>
     
     
